@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drink Water Reminder</title>
+  <link rel="stylesheet" href="waterremind.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💧 Drink Water Reminder</h1>
+
+    <label for="intervalInput">Reminder Interval (in minutes):</label>
+    <input type="number" id="intervalInput" min="1" value="30" />
+
+    <p id="currentTime">Current Time: --:--</p>
+    <p id="nextReminder">Next Reminder: --:--</p>
+    <p id="status"></p>
+
+    <div class="toggles">
+      <label>🌙 Dark Mode <input type="checkbox" id="darkModeToggle"></label>
+      <label>📢 Voice Alert <input type="checkbox" id="voiceToggle" checked></label>
+    </div>
+
+    <div class="buttons">
+      <button onclick="startReminder()">Start</button>
+      <button onclick="stopReminder()">Stop</button>
+    </div>
+  </div>
+
+  <div class="floating-emoji" id="emojiContainer"></div>
+  <script src="waterremind.js"></script>
+</body>
+</html>
